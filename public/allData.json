@@ -1,0 +1,152 @@
+[
+    {
+        "productTitle": "XPhone Ultra",
+        "productImage": "xphone-ultra.jpg",
+        "category": "Smartphones",
+        "price": 999.99,
+        "description": "The latest XPhone Ultra with advanced features and sleek design.",
+        "specifications": [
+            "6.7-inch OLED display",
+            "128GB storage",
+            "Triple camera system",
+            "5G connectivity"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "productTitle": "UltraBook Elite",
+        "productImage": "ultrabook-elite.jpg",
+        "category": "Laptops",
+        "price": 1299.99,
+        "description": "High-performance UltraBook Elite for all your computing needs.",
+        "specifications": [
+            "14-inch Retina display",
+            "16GB RAM",
+            "512GB SSD",
+            "Intel i7 processor"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "productTitle": "Chrono Advance",
+        "productImage": "chrono-advance.jpg",
+        "category": "Smartwatches",
+        "price": 399.99,
+        "description": "Smartwatch with advanced fitness tracking and health monitoring.",
+        "specifications": [
+            "1.4-inch AMOLED display",
+            "GPS",
+            "Heart rate monitor",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "productTitle": "Tab Pro",
+        "productImage": "tab-pro.jpg",
+        "category": "Tablets",
+        "price": 699.99,
+        "description": "Versatile Tab Pro with powerful performance and sleek design.",
+        "specifications": [
+            "10.5-inch display",
+            "256GB storage",
+            "8MP rear camera",
+            "10-hour battery life"
+        ],
+        "availability": false,
+        "rating": 4.4
+    },
+    {
+        "productTitle": "Audio Max",
+        "productImage": "audio-max.jpg",
+        "category": "Headphones",
+        "price": 199.99,
+        "description": "High-fidelity Audio Max headphones with noise-canceling features.",
+        "specifications": [
+            "Over-ear design",
+            "Bluetooth 5.0",
+            "20-hour battery life",
+            "Active noise cancellation"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "productTitle": "Snapper Pro",
+        "productImage": "snapper-pro.jpg",
+        "category": "Cameras",
+        "price": 799.99,
+        "description": "Professional-grade Snapper Pro camera for stunning photography.",
+        "specifications": [
+            "24MP sensor",
+            "4K video recording",
+            "Interchangeable lenses",
+            "Wi-Fi connectivity"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "productTitle": "PlayBox Max",
+        "productImage": "playbox-max.jpg",
+        "category": "Gaming Consoles",
+        "price": 499.99,
+        "description": "Next-gen PlayBox Max console with immersive gaming experience.",
+        "specifications": [
+            "8K resolution support",
+            "1TB storage",
+            "Ray tracing",
+            "VR compatibility"
+        ],
+        "availability": false,
+        "rating": 4.8
+    },
+    {
+        "productTitle": "Smart Light 360",
+        "productImage": "smart-light-360.jpg",
+        "category": "Smart Home",
+        "price": 79.99,
+        "description": "Smart Light 360 with voice control and customizable settings.",
+        "specifications": [
+            "LED lighting",
+            "Wi-Fi enabled",
+            "Compatible with Alexa and Google Home",
+            "Energy efficient"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "productTitle": "Power Bank Pro",
+        "productImage": "power-bank-pro.jpg",
+        "category": "Accessories",
+        "price": 49.99,
+        "description": "Portable Power Bank Pro with fast charging capability.",
+        "specifications": [
+            "10000mAh capacity",
+            "USB-C and USB-A ports",
+            "Quick Charge 3.0",
+            "Compact design"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "productTitle": "Fitness Tracker X",
+        "productImage": "fitness-tracker-x.jpg",
+        "category": "Wearables",
+        "price": 129.99,
+        "description": "Fitness Tracker X with comprehensive health and activity monitoring.",
+        "specifications": [
+            "OLED display",
+            "Heart rate and sleep tracking",
+            "GPS",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.4
+    }
+]

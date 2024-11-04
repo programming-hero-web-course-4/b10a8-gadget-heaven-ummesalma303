@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Layout = () => {
+const Categories = () => {
     return (
         <div>
-            <h2>Layout</h2>
+            
         </div>
     );
 };
 
-export default Layout;
+export default Categories;

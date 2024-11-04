@@ -1,0 +1,37 @@
+[
+    {
+        "category": "All Products",
+        "id": 201,
+        "slug": "xphone-ultra"
+    },
+    {
+        "category": "Laptops",
+        "id": 202,
+        "slug": "ultrabook-elite"
+    },
+    {
+        "category": "Phones",
+        "id": 203,
+        "slug": "chrono-advance"
+    },
+    {
+        "category": "Accessories",
+        "id": 204,
+        "slug": "tab-pro"
+    },
+    {
+        "category": "Smart Watches",
+        "id": 205,
+        "slug": "audio-max"
+    },
+    {
+        "category": "MacBook",
+        "id": 206,
+        "slug": "snapper-pro"
+    },
+    {
+        "category": "Iphone",
+        "id": 207,
+        "slug": "playbox-max"
+    }
+]

@@ -9,7 +9,9 @@ export default {
       fontFamily: {
         sora:'Sora'
       },
-      colorPrimary:'#9538E2'
+     colors:{
+       colorPrimary:'#9538E2'
+     }
     },
   },
   plugins: [
