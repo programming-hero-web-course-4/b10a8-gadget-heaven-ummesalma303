@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
 // import Categories from '../components/Categories';
-import CategoryName from '../components/CategoryName';
+import Sidebar from '../components/Sidebar';
 import { Outlet } from 'react-router-dom';
 // import BannerContent from '../components/BannerContent';
 
@@ -11,8 +11,13 @@ const Home = () => {
             {/* <BannerContent></BannerContent> */}
             <Banner></Banner>
             {/* <Categories></Categories> */}
-            <CategoryName></CategoryName>
+            <div className='w-[90%] mx-auto my-12'>
+                <div className='text-center my-9 text-4xl font-bold'>
+                    <h2>Explore Cutting-Edge Gadgets</h2>
+                </div>
+            <Sidebar></Sidebar>
             <Outlet></Outlet>
+            </div>
         </div>
     );
 };

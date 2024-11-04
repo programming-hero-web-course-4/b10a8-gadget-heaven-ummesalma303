@@ -1,37 +1,37 @@
 [
     {
+        "id": "001",
         "category": "All Products",
-        "id": 201,
-        "slug": "xphone-ultra"
+        "slug": "all-products"
     },
     {
+        "id": "002",
         "category": "Laptops",
-        "id": 202,
-        "slug": "ultrabook-elite"
+        "slug": "laptops"
     },
     {
+        "id": "003",
         "category": "Phones",
-        "id": 203,
-        "slug": "chrono-advance"
+        "slug": "phones"
     },
     {
-        "category": "Accessories",
-        "id": 204,
-        "slug": "tab-pro"
+        "id": "004",
+       "category": "Charger",
+        "slug": "accessories"
     },
     {
-        "category": "Smart Watches",
-        "id": 205,
-        "slug": "audio-max"
+        "id": "005",
+        "category": "Smart Watch",
+        "slug": "smart-watches"
     },
     {
-        "category": "MacBook",
-        "id": 206,
-        "slug": "snapper-pro"
+        "id": "006",
+        "category": "Mac Book",
+        "slug": "macbook"
     },
     {
-        "category": "Iphone",
-        "id": 207,
-        "slug": "playbox-max"
+        "id": "007",
+        "category": "iPhone",
+        "slug": "iphone"
     }
 ]
