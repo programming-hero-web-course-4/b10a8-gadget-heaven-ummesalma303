@@ -15,8 +15,10 @@ const Home = () => {
                 <div className='text-center my-9 text-4xl font-bold'>
                     <h2>Explore Cutting-Edge Gadgets</h2>
                 </div>
+            <div className='flex space-x-12'>
             <Sidebar></Sidebar>
             <Outlet></Outlet>
+            </div>
             </div>
         </div>
     );

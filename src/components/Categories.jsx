@@ -1,25 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 import { Outlet, useLoaderData, useParams } from 'react-router-dom';
+import Category from './Category';
 
 const Categories = () => {
-    const [products,setProducts]=useState([])
     const allData = useLoaderData()
     const {categories} = useParams()
-    // console.log(category);
+    const [products,setProducts]=useState([])
+
+    // console.log(categories);
     useEffect(() => {
-    // const category = useParams()
-       if (categories) {
+       if (categories ) {
+        // categories=== 'All Products'
         const data = allData.filter(data => data.category===categories)
-        console.log(data)
-       } else {
-           console.log(allData)
+        setProducts(data)
+       }
+        else {
+           setProducts(allData)
        }
     },[categories,allData])
+    
+
+
+    useEffect(()=>{
+        if (categories=== 'All Products') {
+            setProducts(allData)
+        }
+    },[categories,allData])
+
+    useEffect(()=>{
+        setProducts(allData.slice(0,6));
+
+    },[])
+    console.log(products);
     return (
-        <div>
-            
+      <div>
+        <h2 className='text-4xl font-bold text-purple-700'>{products.length?'':'NO Data Found'}</h2>
+          <div className='grid grid-cols-3 gap-5'>
+            {
+                products.map(product=><Category key={product.id} product={product}></Category>)
+            }
         </div>
+      </div>
     );
 };
 
