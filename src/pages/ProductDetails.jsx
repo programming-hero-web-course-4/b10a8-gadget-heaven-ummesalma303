@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import BannerContent from '../components/BannerContent';
 import { FaRegHeart } from 'react-icons/fa';
 import { BsCart4 } from 'react-icons/bs';
-import { getAllCart, setAllCart } from '../utility';
+import { getAllCart, setAllCart, wishListSetAllCart } from '../utility';
 
 const ProductDetails = () => {
 
@@ -27,6 +27,9 @@ const ProductDetails = () => {
     setAllCart(id)
     setIsCart(true)
     // setTotal(total+price)
+  }
+  const handleWishlist = (id,price) => {
+    wishListSetAllCart(id)
   }
     return (
         <div>
@@ -64,7 +67,7 @@ const ProductDetails = () => {
    <h3>{rating}</h3>
     <div className="card-actions">
       <button onClick={()=>handleCart(id,price)} disabled={isCart} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
-      <button className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
+      <button onClick={()=>handleWishlist(id,price)} className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
 
     </div>
   </div>

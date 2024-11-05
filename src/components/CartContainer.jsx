@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Cart from '../components/Cart';
+import Wishlist from './Wishlist';
 
-const CartContainer = ({ products }) => {
+const CartContainer = ({ products,removeItems,wishlist }) => {
+    // const [toggle, setToggle] = useState(true);
     const [toggle, setToggle] = useState(true);
+
     // console.log(products)
+    console.log(wishlist)
     const HandleButton = () => {
         setToggle(!toggle)
+        // const HandleButton = () => {
+        //     setToggle(!toggle)
+        // }
     }
     return (
         <div>
@@ -24,9 +31,14 @@ const CartContainer = ({ products }) => {
             </div>
             
             <div className='space-y-5'>
-            {
+
+                {
+ toggle?<Cart newProducts={products} removeItems={removeItems}></Cart>:<Wishlist wishlist={wishlist}></Wishlist>
+
+                }
+            {/* {
                 products.map(product=><Cart key={product.id} newProducts={product}></Cart>)
-            }
+            } */}
            </div>
         </div>
     );
