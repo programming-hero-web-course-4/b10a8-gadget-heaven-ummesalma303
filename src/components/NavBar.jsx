@@ -13,7 +13,7 @@ const NavBar = () => {
 
      const {pathname}= useLocation()
     return (
-        <div className={`${pathname==='/dashboard'||pathname==='/statistics'?'':'text-white bg-colorPrimary'} mt-2 mx-2 rounded-t-2xl`}>
+        <div className={`${pathname==='/'?'text-white bg-colorPrimary':''} mt-2 mx-2 rounded-t-2xl`}>
            <div className="navbar  ">
   <div className="navbar-start">
     <div className="dropdown">

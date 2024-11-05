@@ -32,7 +32,6 @@ const Categories = () => {
         setProducts(allData.slice(0,6));
 
     },[])
-    console.log(products);
     return (
       <div>
         <h2 className='text-4xl font-bold text-purple-700'>{products.length?'':'NO Data Found'}</h2>

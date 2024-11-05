@@ -1,18 +1,6 @@
-// import React from 'react';
-
-// const Category = ({product}) => {
-//     console.log(p);
-//     return (
-//         <div>
-//             <h1></h1>
-//         </div>
-//     );
-// };
-
-// export default Category;
-
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 // {
 //     "id": "008",
@@ -36,8 +24,6 @@ import PropTypes from 'prop-types';
 
 const Category =({product}) => {
     const {id,product_title,product_image,price}=product
-    // console.log( product);
-
  
     return (
         <div>
@@ -53,7 +39,7 @@ const Category =({product}) => {
     <h2 className="card-title text-2xl font-bold">{product_title}</h2>
     <p className="text-lg font-medium text-[#09080F99]">Price: {price}k</p>
     <div className="card-actions">
-      <button className="btn text-[#9538E2] text-lg font-semibold bg-transparent rounded-full border-2 border-[#9538E2]">View Details</button>
+      <NavLink to={`/details/${id}`}><button className="btn text-[#9538E2] text-lg font-semibold bg-transparent rounded-full border-2 border-[#9538E2]">View Details</button></NavLink>
     </div>
   </div>
 </div>
