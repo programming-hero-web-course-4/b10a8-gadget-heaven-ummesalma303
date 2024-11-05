@@ -2,25 +2,6 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-// {
-//     "id": "008",
-//     "product_title": "Gaming Laptop X",
-//     "product_image": "https://example.com/images/gaming-laptop-x.jpg",
-//     "category": "Laptops",
-//     "price": 1499.99,
-//     "description": "A powerful gaming laptop with advanced cooling technology.",
-//     "specification": [
-//         "32GB RAM",
-//         "2TB SSD",
-//         "NVIDIA RTX 3080",
-//         "17-inch Full HD Display"
-//     ],
-//     "availability": true,
-//     "rating": 4.9
-// }
-
-
-
 
 const Category =({product}) => {
     const {id,product_title,product_image,price}=product
