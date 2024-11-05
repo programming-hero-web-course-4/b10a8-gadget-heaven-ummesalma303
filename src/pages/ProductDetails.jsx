@@ -4,27 +4,14 @@ import BannerContent from '../components/BannerContent';
 import { FaRegHeart } from 'react-icons/fa';
 import { BsCart4 } from 'react-icons/bs';
 import { getAllCart, setAllCart } from '../utility';
-// {
-//     "id": 1,
-//     "product_title": "Portable Power Bank 10000mAh",
-//     "product_image": "https://theunitedindian.com/images/gadgets-20-05-24-E-Hero.webp",
-//     "category": "Power Bank",
-//     "price": 49.99,
-//     "description": "A compact power bank with a 10000mAh capacity for charging on the go.",
-//     "specification": [
-//         "10000mAh Capacity",
-//         "Dual USB Ports",
-//         "LED Battery Indicator"
-//     ],
-//     "availability": true,
-//     "rating": 4.5
-// }
+
 const ProductDetails = () => {
+
   const [cart,setCart]=useState([])
   const {id} = useParams()
   const [products,setProducts] =useState([])
   const allData=useLoaderData();
-  
+  // const [total,setTotal]=useState(0)
   const { product_image, product_title, price, description, specification, rating } = products;
   const [isCart,setIsCart]=useState(false)
     useEffect(()=>{
@@ -36,9 +23,10 @@ const ProductDetails = () => {
       // console.log(isExist)
     },[])
 
-  const handleCart = (id) => {
+  const handleCart = (id,price) => {
     setAllCart(id)
     setIsCart(true)
+    // setTotal(total+price)
   }
     return (
         <div>
@@ -75,7 +63,7 @@ const ProductDetails = () => {
    </div>
    <h3>{rating}</h3>
     <div className="card-actions">
-      <button onClick={()=>handleCart(id)} disabled={isCart} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
+      <button onClick={()=>handleCart(id,price)} disabled={isCart} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
       <button className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
 
     </div>

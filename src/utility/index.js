@@ -20,4 +20,11 @@ const setAllCart = (id) => {
     }
 }
 
+
+const remove = (id) => {
+    const removeCart = getAllCart()
+    const remainingItems = removeCart.filter(idx => idx != id)
+    localStorage.setItem('cart',JSON.stringify(remainingItems))
+}
+
 export {setAllCart,getAllCart}

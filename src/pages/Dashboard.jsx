@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import BannerContent from '../components/BannerContent';
-import Cart from '../components/Cart';
+// import Cart from '../components/Cart';
 import Wishlist from '../components/Wishlist';
 import { useLoaderData } from 'react-router-dom';
 import { getAllCart } from '../utility';
+import CartContainer from '../components/CartContainer';
 
 const Dashboard = () => {
     const [toggle, setToggle] = useState(true);
@@ -16,10 +17,11 @@ const Dashboard = () => {
 
     useEffect(() => {
         const cart = getAllCart()
-        const gadget = allProduct.find(product => product.id === parseInt(cart))
+        const storeCartInt= cart.map(id=>parseInt(id))
+        const gadget = allProduct.filter(product => storeCartInt.includes(product.id))
         setProducts(gadget)
     }, [])
-    console.log(products)
+    
     return (
         <div>
              <div className='bg-colorPrimary text-center pt-3 pb-11'>
@@ -31,11 +33,11 @@ const Dashboard = () => {
             </div>
                 <div className='my-5 w-90%'>
                 {
-                    toggle?<Cart></Cart>:<Wishlist></Wishlist>
+                    toggle?<CartContainer products={products}></CartContainer>:<Wishlist></Wishlist>
                 }
                 
 
-                <img src={products.product_image} alt="" />
+                {/* <img src={products.product_image} alt="" /> */}
                </div>
         </div>
     );
