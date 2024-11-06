@@ -3,9 +3,10 @@
 This website i use some react fundamental topics.like:
 - Props
 - Destructuring
-- Map,filter,find
+- Map,filter,find,reduce etc.
 - Component 
 - Routes
+- Local Storage
 
 ## data handling:
 I used local storage to handle the data.  The data will remain even if the browser is refreshed.
@@ -19,3 +20,6 @@ I used local storage to handle the data.  The data will remain even if the brows
 
 ## Live Preview: 
 https://our-gadget-heaven.surge.sh/
+
+## Requirement Documentation Link:
+https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf
