@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { GoXCircle } from 'react-icons/go';
 import { remove } from '../utility';
 
@@ -37,8 +37,8 @@ const Cart = ({ newProducts,removeItems }) => {
     );
 };
 
-Cart.propTypes = {
+// Cart.propTypes = {
     
-};
+// };
 
 export default Cart;

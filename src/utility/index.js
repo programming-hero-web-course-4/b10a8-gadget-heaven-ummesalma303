@@ -85,4 +85,11 @@ const wishListRemove = (id) => {
     // console.log(remainingItems)
    localStorage.setItem('wishlist',JSON.stringify(remainingItems))
 }
-export {setAllCart,getAllCart,remove, wishListAllCart,wishListSetAllCart, wishListRemove}
+
+const clearData=()=>{
+    localStorage.clear()
+}
+
+
+
+export {setAllCart,getAllCart,remove, wishListAllCart,wishListSetAllCart, wishListRemove,clearData}

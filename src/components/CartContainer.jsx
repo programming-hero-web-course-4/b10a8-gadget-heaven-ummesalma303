@@ -5,6 +5,7 @@ import Cart from '../components/Cart';
 import { BiSortAlt2 } from 'react-icons/bi';
 import image from '../../public/images/Group.png'
 import { useNavigate } from 'react-router-dom';
+import { clearData } from '../utility';
 
 const CartContainer = ({ products,removeItems,handleSort,total }) => {
     // const [toggle, setToggle] = useState(true);
@@ -12,6 +13,7 @@ const CartContainer = ({ products,removeItems,handleSort,total }) => {
 
     const handleButton = () =>{
       navigate('/')
+      clearData()
     }
     return (
         <div>

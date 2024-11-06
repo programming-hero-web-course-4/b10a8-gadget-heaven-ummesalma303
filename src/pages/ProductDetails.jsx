@@ -1,15 +1,16 @@
-// import ReactStars from "react-rating-stars-component";
-// import React from "react";
+import ReactStars from "react-rating-stars-component";
+import React from "react";
 // import { render } from "react-dom";
 
 
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import BannerContent from '../components/BannerContent';
-import { FaRegHeart } from 'react-icons/fa';
+// import { FaRegHeart } from 'react-icons/fa';
 import { BsCart4 } from 'react-icons/bs';
 import { getAllCart, setAllCart, wishListSetAllCart } from '../utility';
+import { CiHeart } from "react-icons/ci";
 
 
 
@@ -97,10 +98,19 @@ const ProductDetails = () => {
    <h1 className='text-lg font-bold'>Ratting: </h1>
    <span className='w-4 h-4 bg-black'></span>
    </div>
-   <h3>  {rating}</h3>
+  <div className="flex items-center space-x-2 my-3">
+    
+  <ReactStars
+    count={5}
+    value={3}
+    size={24}
+    activeColor="#ffd700"
+  /> 
+  <span className="rounded-full py-1 px-4 bg-[#09080F0D] hover:bg-[#1e1d2436]">{rating}</span>
+  </div>
     <div className="card-actions">
       <button onClick={()=>handleCart(id,price)} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
-      <button onClick={()=>handleWishlist(id)} disabled={isWishList} className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
+      <button onClick={()=>handleWishlist(id)} disabled={isWishList} className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><CiHeart size={22} /></button>
 
     </div>
   </div>
