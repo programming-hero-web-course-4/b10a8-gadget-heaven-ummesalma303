@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Cart from './Cart';
+import { BsCart4 } from 'react-icons/bs';
 
-const Wishlist = ({ wishlist }) => {
-    console.log(wishlist)
+
+const Wishlist = ({ newProducts,removeItems}) => {
+    // console.log(removeItems)
     return (
-        <div className='h-28'>
-            {/* {
-                wishlist.map(p=>console.log(p))
-            } */}
+        <div>
+           <Cart newProducts={newProducts} removeItems={removeItems}></Cart>
+           {/* <button onClick={()=>handleCart(id,price)} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button> */}
     </div>
 //         <div >
 
@@ -36,7 +37,7 @@ const Wishlist = ({ wishlist }) => {
 //          ))
 //           }
 //        </div>
-        //         </div>
+//                 </div>
         // <>
         
     );

@@ -14,6 +14,8 @@ const ProductDetails = () => {
   // const [total,setTotal]=useState(0)
   const { product_image, product_title, price, description, specification, rating } = products;
   const [isCart,setIsCart]=useState(false)
+  const [isWishList,setWishlist]=useState(false)
+
     useEffect(()=>{
         const findData = [...allData].find(product=>product.id===parseInt(id));
       setProducts(findData);
@@ -25,11 +27,13 @@ const ProductDetails = () => {
 
   const handleCart = (id,price) => {
     setAllCart(id)
-    setIsCart(true)
+    // setIsCart(true)
+    console.log(id);
     // setTotal(total+price)
   }
-  const handleWishlist = (id,price) => {
+  const handleWishlist = (id) => {
     wishListSetAllCart(id)
+    setWishlist(true)
   }
     return (
         <div>
@@ -66,8 +70,8 @@ const ProductDetails = () => {
    </div>
    <h3>{rating}</h3>
     <div className="card-actions">
-      <button onClick={()=>handleCart(id,price)} disabled={isCart} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
-      <button onClick={()=>handleWishlist(id,price)} className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
+      <button onClick={()=>handleCart(id,price)} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
+      <button onClick={()=>handleWishlist(id)} disabled={isWishList} className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
 
     </div>
   </div>

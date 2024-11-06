@@ -8,6 +8,9 @@ import Home from "../pages/Home";
 import Category from "../components/Category";
 import Categories from "../components/Categories";
 import ProductDetails from "../pages/ProductDetails";
+import Contact from "../pages/Contact";
+import Brand from "../pages/Brand";
+import ErrorPage from "../pages/ErrorPage";
   
 const router = createBrowserRouter([
     {
@@ -41,13 +44,24 @@ const router = createBrowserRouter([
         {
           path: "/statistics",
           element:<Statistics></Statistics>,
+          loader:()=>fetch('../allData.json')
         },
         {
           path: "/dashboard",
           element: <Dashboard></Dashboard>,
           loader:()=>fetch('../allData.json')
         },
-      ]
+        {
+          path: "/contact",
+          element: <Contact></Contact>,
+        },
+        {
+          path: "/brand",
+          element: <Brand></Brand>,
+        },
+      ],
+      errorElement:<ErrorPage></ErrorPage>,
+
     }
     
 ]);

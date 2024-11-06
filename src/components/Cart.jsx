@@ -27,18 +27,19 @@ import { GoXCircle } from 'react-icons/go';
 import { remove } from '../utility';
 
 const Cart = ({ newProducts,removeItems }) => {
+  // console.log(removeItems);
     // const [product,setProduct]=useState(0)
     // console.log(newProducts)
     // const { id,product_title, product_image, price, description } = newProducts;
 
   
     return (
-        <div>
+        <div className='space-y-6'>
            
             {/* card */}
         {
           newProducts.map(product => (
-            <div key={product.id} className="card card-side bg-base-100 shadow-xl justify-between mx-24 p-6">
+            <div key={product.id} className="card card-side bg-base-100 justify-between mx-24 p-6">
   <figure>
     <img className='w-52 aspect-video rounded-xl'
       src={product.product_image}

@@ -3,7 +3,7 @@ import BannerContent from '../components/BannerContent';
 // import Cart from '../components/Cart';
 import Wishlist from '../components/Wishlist';
 import { useLoaderData } from 'react-router-dom';
-import { getAllCart, remove, wishListAllCart, wishListRemove } from '../utility';
+import { getAllCart, remove, wishListAllCart, wishListRemove, } from '../utility';
 import CartContainer from '../components/CartContainer';
 import Home from './Home';
 import ProductDetails from './ProductDetails';
@@ -22,34 +22,62 @@ const Dashboard = () => {
         const cart = getAllCart()
         const storeCartInt= cart.map(id=>parseInt(id))
         const gadget = allProduct.filter(product => storeCartInt.includes(product.id))
-        setProducts(gadget)
-        // console.log(allProduct)
-    }, [])
+        // const gadget = allProduct.filter(product => console.log(product.id,[...storeCartInt]))
+        // setProducts(gadget)
+      
+        if (allProduct.length) {
+        const cart = getAllCart()
+        const all=[]
+       for (const id of cart) {
+        const gadget =allProduct.find(product=>product.id==id)
+        // console.log(gadget);
+        if (gadget ) {
+            all.push(gadget)
+        }
+        // console.log(all);
+        setProducts(all)
+
+       }
+
+       }
+
+        // console.log(products)
+    }, [allProduct])
 
     useEffect(() => {
         const cart = wishListAllCart()
         const storeCartInt= cart.map(id=>parseInt(id))
-        const gadget = allProduct.filter(product => storeCartInt.includes(product.id))
-        setWishlist(gadget)
+        const wishGadget = allProduct.filter(product => storeCartInt.includes(product.id))
+        setWishlist(wishGadget)
+
+        // const isExist=cart.filter(product=>storeCartInt.includes(product.id))
         // console.log(gadget)
+        // if (wishGadget) {
+        //     setWishlist(true)
+        // }
     }, [])
 
     const removeItems = (id) => {
         remove(id)
-        wishListRemove(id)
       // const product = newProducts.filter(product=product.id!==id)
       const remainingProduct = products.filter(p=>p.id!==id)
         setProducts(remainingProduct)
         // setWishlist()
     }
-    // console.log(wishlist)
-    // const removeItems = (id) => {
-    //     wishListRemove(id)
-    //   // const product = newProducts.filter(product=product.id!==id)
-    //   const remainingProduct = products.filter(p=>p.id!==id)
-    //       setProducts(remainingProduct)
-    //   }
-  
+
+
+    const removeList = (id) => {
+        wishListRemove(id)
+      const remainingProduct = wishlist.filter(p=>p.id!==id)
+        setWishlist(remainingProduct)
+    }
+
+  const handleSort=(sort)=>{
+    if (sort) {
+        const sortPrice = [...allProduct].sort((a,b)=>b.price-a.price)
+        setProducts(sortPrice)
+    }
+  }
     return (
         <div>
              <div className='bg-colorPrimary text-center pt-3 pb-11'>
@@ -61,7 +89,7 @@ const Dashboard = () => {
             </div>
                 <div className='my-5 w-90%'>
                 {
-                    toggle ? <CartContainer removeItems={removeItems} products={products}></CartContainer> : <Wishlist wishlist={wishlist}></Wishlist>
+                    toggle ? <CartContainer removeItems={removeItems} products={products} handleSort={handleSort}></CartContainer> : <Wishlist newProducts={wishlist} removeItems={removeList}></Wishlist>
                     // toggle?<h1>hello</h1>:<h2>hhhhhhhhhh</h2>
                 }
                 {/* {
