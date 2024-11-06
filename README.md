@@ -19,7 +19,7 @@ I used local storage to handle the data.  The data will remain even if the brows
 5. Added barChat
 
 ## Live Preview: 
-https://our-gadget-heaven.surge.sh/
+https://gadget-netlify-com.netlify.app/
 
 ## Requirement Documentation Link:
 https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf

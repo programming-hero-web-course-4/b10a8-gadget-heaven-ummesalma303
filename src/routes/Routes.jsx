@@ -15,23 +15,25 @@ import ErrorPage from "../pages/ErrorPage";
 const router = createBrowserRouter([
     {
       path: "/",
-      element:<MainLayout></MainLayout>,
+    element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
+
       children:[
         {
           path: "/",
           element: <Home></Home>,
-          loader:()=>fetch('../category.json'),
+          loader:()=>fetch('/category.json'),
           children:[
             {
               path: '/',
               element: <Categories></Categories>,
-              loader:()=>fetch('../allData.json')
+              loader:()=>fetch('/allData.json')
               
             },
             {
               path: '/categories/:categories',
               element: <Categories></Categories>,
-              loader:()=>fetch('../allData.json')
+              loader:()=>fetch('/allData.json')
               
             },
           ]
@@ -39,17 +41,17 @@ const router = createBrowserRouter([
         {
           path:'/details/:id',
           element:<ProductDetails></ProductDetails>,
-          loader:()=>fetch('../allData.json')
+          loader:()=>fetch('/allData.json')
         },
         {
           path: "/statistics",
           element:<Statistics></Statistics>,
-          loader:()=>fetch('../allData.json')
+          loader:()=>fetch('/allData.json')
         },
         {
           path: "/dashboard",
           element: <Dashboard></Dashboard>,
-          loader:()=>fetch('../allData.json')
+          loader:()=>fetch('/allData.json')
         },
         {
           path: "/contact",
@@ -60,7 +62,6 @@ const router = createBrowserRouter([
           element: <Brand></Brand>,
         },
       ],
-      errorElement:<ErrorPage></ErrorPage>,
 
     }
     
