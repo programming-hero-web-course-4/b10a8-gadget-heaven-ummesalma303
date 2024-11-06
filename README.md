@@ -1,8 +1,21 @@
-# React + Vite
+# Gadget Heaven
+## React fundamental concept:
+This website i use some react fundamental topics.like:
+- Props
+- Destructuring
+- Map,filter,find
+- Component 
+- Routes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## data handling:
+I used local storage to handle the data.  The data will remain even if the browser is refreshed.
 
-Currently, two official plugins are available:
+## Key feature: 
+1. website data is stored so that the data remains safe until the user deletes the data.
+2. This is a multisite website.
+3. Products are categorized.
+4. Added Error handeling page
+5. Added barChat
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Preview: 
+https://our-gadget-heaven.surge.sh/
