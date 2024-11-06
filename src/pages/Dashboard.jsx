@@ -12,6 +12,7 @@ const Dashboard = () => {
     const [toggle, setToggle] = useState(true);
     const [products,setProducts]=useState([])
     const [wishlist,setWishlist]=useState([])
+    const [total,setTotal]=useState(0)
     const allProduct=useLoaderData()
     const HandleButton = () => {
         setToggle(!toggle)
@@ -33,10 +34,11 @@ const Dashboard = () => {
         // console.log(gadget);
         if (gadget ) {
             all.push(gadget)
-        }
-        // console.log(all);
-        setProducts(all)
+        setTotal((prev)=>prev+gadget.price)
 
+        }
+        setProducts(all)
+        // console.log(gadget);
        }
 
        }
@@ -89,7 +91,7 @@ const Dashboard = () => {
             </div>
                 <div className='my-5 w-90%'>
                 {
-                    toggle ? <CartContainer removeItems={removeItems} products={products} handleSort={handleSort}></CartContainer> : <Wishlist newProducts={wishlist} removeItems={removeList}></Wishlist>
+                    toggle ? <CartContainer removeItems={removeItems} total={total} products={products} handleSort={handleSort}></CartContainer> : <Wishlist newProducts={wishlist} removeItems={removeList}></Wishlist>
                     // toggle?<h1>hello</h1>:<h2>hhhhhhhhhh</h2>
                 }
                 {/* {

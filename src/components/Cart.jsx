@@ -1,26 +1,3 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-
-// const Cart = ({ newProducts }) => {
-//     console.log(newProducts)
-//     return (
-//         <div>
-            
-//         </div>
-//     );
-// };
-
-// Cart.propTypes = {
-    
-// };
-
-// export default Cart;
-
-
-
-
-
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { GoXCircle } from 'react-icons/go';

@@ -1,9 +1,38 @@
+// import ReactStars from "react-rating-stars-component";
+// import React from "react";
+// import { render } from "react-dom";
+
+
+
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import BannerContent from '../components/BannerContent';
 import { FaRegHeart } from 'react-icons/fa';
 import { BsCart4 } from 'react-icons/bs';
 import { getAllCart, setAllCart, wishListSetAllCart } from '../utility';
+
+
+
+
+
+// const star = {
+//   size: 50,
+//   count: 5,
+//   color: "black",
+//   activeColor: "red",
+//   value: 7.5,
+//   a11y: true,
+//   isHalf: true,
+//   emptyIcon: <i className="far fa-star" />,
+//   halfIcon: <i className="fa fa-star-half-alt" />,
+//   filledIcon: <i className="fa fa-star" />,
+//   onChange: newValue => {
+//     console.log(`Example 2: new value is ${newValue}`);
+//   }
+// };
+
+
+
 
 const ProductDetails = () => {
 
@@ -65,10 +94,10 @@ const ProductDetails = () => {
     </ul>
    </div>
    <div className='flex items-center space-x-1'>
-   <h1 className='text-lg font-bold'>Ratting </h1>
+   <h1 className='text-lg font-bold'>Ratting: </h1>
    <span className='w-4 h-4 bg-black'></span>
    </div>
-   <h3>{rating}</h3>
+   <h3>  {rating}</h3>
     <div className="card-actions">
       <button onClick={()=>handleCart(id,price)} className="btn bg-colorPrimary text-white rounded-full">Add To Card <BsCart4 size={23}/></button>
       <button onClick={()=>handleWishlist(id)} disabled={isWishList} className="btn hover:bg-colorPrimary text-colorPrimary hover:text-white border-colorPrimary"><FaRegHeart size={25}/></button>
