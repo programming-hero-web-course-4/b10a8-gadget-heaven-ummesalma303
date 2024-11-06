@@ -1,38 +1,54 @@
-// import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 import Cart from '../components/Cart';
 // import Wishlist from './Wishlist';
 import { BiSortAlt2 } from 'react-icons/bi';
 import image from '../../public/images/Group.png'
 import { useNavigate } from 'react-router-dom';
-import { clearData } from '../utility';
+import { clearData, getAllCart } from '../utility';
 
-const CartContainer = ({ products,removeItems,handleSort,total }) => {
-    // const [toggle, setToggle] = useState(true);
+const CartContainer = ({ products, removeItems, handleSort }) => {
+  // console.log(products)
+  // const [total,setTotal]=useState(0)
+
+  const totalPrice = products.reduce((a, b) => {
+    return a + b.price
+  },0)
+  // console.log(totalPrice)
+
+    const [disableBtn, setDisable] = useState(true);
     const navigate = useNavigate()
 
     const handleButton = () =>{
       navigate('/')
       clearData()
     }
+  useEffect(() => {
+    const cart = getAllCart()
+    
+  //     console.log(cart.length)
+      setDisable(cart.length===0)
+
+   },[])
+    // console.log(disableBtn)
     return (
         <div>
             <div className='flex justify-between px-10'>
                  <h2 className='text-2xl font-bold'>Cart</h2>
                 <div className='flex items-center space-x-4'>
-                    <h2>Total cost:{total}</h2>
+            <h2>Total cost:{ totalPrice.toFixed(2)}</h2>
                  <div>
                         {/* <button className='btn '>Sort By Price</button> */}
                 <div onClick={()=>handleSort('sort')} className="space-x-2 ">
                     <button className='btn border-2  border-purple-700 rounded-full px-6'>Sort By Price <BiSortAlt2 size={20}/></button>
                    {/* Open the modal using document.getElementById('ID').showModal() method */}
-<button className="btn text-white rounded-full bg-colorPrimary" onClick={()=>document.getElementById('my_modal_1').showModal()}>open modal</button>
+<button disabled={disableBtn} className="btn text-white rounded-full bg-colorPrimary" onClick={()=>document.getElementById('my_modal_1').showModal()}>Purchase</button>
 <dialog id="my_modal_1" className="modal">
   <div className="modal-box mx-auto text-center p-9">
     <img className='mx-auto' src={image} alt="" />
     <h3 className="font-bold text-2xl">Thanks for purchasing.</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
-    <h3>Total:{total}</h3>
+                    <h3>Total:{ totalPrice.toFixed(2)}</h3>
     <div>
       <form method="dialog">
         {/* if there is a button in form, it will close the modal */}

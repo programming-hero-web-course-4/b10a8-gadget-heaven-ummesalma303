@@ -13,6 +13,7 @@ const getAllCart = () => {
 }
 
 const setAllCart = (id) => {
+    // console.log(id)
     const cartId = getAllCart();
     // if (cartId.includes(id)) {
     //     alert('already exist')
@@ -20,7 +21,7 @@ const setAllCart = (id) => {
         cartId.push(id)
         const cart = JSON.stringify(cartId)
         localStorage.setItem('cart', cart)
-        toast.success('Successfully Added')
+        toast.success('Successfully Added In Cart')
     // }
 }
 
@@ -28,7 +29,9 @@ const remove = (id) => {
     const removeCart = getAllCart()
     const remainingItems = removeCart.filter(idx => idx != id.toString())
     // console.log(remainingItems)
-   localStorage.setItem('cart',JSON.stringify(remainingItems))
+    localStorage.setItem('cart', JSON.stringify(remainingItems))
+    toast.success('Successfully Remove')
+    
 }
 
 
@@ -75,7 +78,7 @@ const wishListSetAllCart = (id) => {
         cartId.push(id)
         const cart = JSON.stringify(cartId)
         localStorage.setItem('wishlist', cart)
-        toast.success('WishList Successfully Added')
+        toast.success('Successfully Added In WishList')
     }
 }
 

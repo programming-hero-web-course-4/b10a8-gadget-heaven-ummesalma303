@@ -15,8 +15,8 @@ const Cart = ({ newProducts,removeItems }) => {
            
             {/* card */}
         {
-          newProducts.map(product => (
-            <div key={product.id} className="card card-side bg-base-100 justify-between mx-24 p-6">
+          newProducts.map((product,i) => (
+            <div key={i} className="card card-side bg-base-100 justify-between mx-24 p-6">
   <figure>
     <img className='w-52 aspect-video rounded-xl'
       src={product.product_image}

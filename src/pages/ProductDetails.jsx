@@ -58,7 +58,7 @@ const ProductDetails = () => {
   const handleCart = (id,price) => {
     setAllCart(id)
     // setIsCart(true)
-    console.log(id);
+    // console.log(id);
     // setTotal(total+price)
   }
   const handleWishlist = (id) => {
