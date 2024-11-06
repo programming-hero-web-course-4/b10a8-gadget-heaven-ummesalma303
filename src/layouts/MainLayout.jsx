@@ -7,7 +7,19 @@ import 'react-toastify/dist/ReactToastify.css';
 const Layout = () => {
     return (
         <div>
-           <ToastContainer />
+          <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition: Bounce
+/>
           <NavBar></NavBar>
           <Outlet></Outlet>
           <Footer></Footer>

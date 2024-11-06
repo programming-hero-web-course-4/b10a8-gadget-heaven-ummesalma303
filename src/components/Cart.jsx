@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import { GoXCircle } from 'react-icons/go';
 import { remove } from '../utility';
 
 const Cart = ({ newProducts,removeItems }) => {
-  // console.log(removeItems);
-    // const [product,setProduct]=useState(0)
-    // console.log(newProducts)
-    // const { id,product_title, product_image, price, description } = newProducts;
 
   
     return (
-        <div className='space-y-6'>
+        <div className='space-y-6 my-12'>
            
             {/* card */}
         {

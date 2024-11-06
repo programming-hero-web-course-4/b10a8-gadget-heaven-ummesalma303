@@ -5,7 +5,7 @@ import Cart from '../components/Cart';
 import { BiSortAlt2 } from 'react-icons/bi';
 import image from '../../public/images/Group.png'
 import { useNavigate } from 'react-router-dom';
-import { clearData, getAllCart } from '../utility';
+import { clearData, getAllCart, wishListAllCart } from '../utility';
 
 const CartContainer = ({ products, removeItems, handleSort }) => {
   // console.log(products)
@@ -25,7 +25,7 @@ const CartContainer = ({ products, removeItems, handleSort }) => {
     }
   useEffect(() => {
     const cart = getAllCart()
-    
+    const wishCart= wishListAllCart()
   //     console.log(cart.length)
       setDisable(cart.length===0)
 
